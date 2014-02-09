@@ -4,6 +4,6 @@ $content = file_get_contents($url);
 $json = json_decode($content, true);
 
 foreach($json['response'] as $item) {
-    print '<img src=' . $item['thumb_src'] .'> <a href=./photos.php?album=' . $item['aid'] . '>' . $item['title'] . '</a><br>'; //находим в response наш AID и Title, после чего формируем ссылку в виде GET запроса, потому что именно так в моём примере мы будем понимать, в какой именно альбом мы попали. 
+    print '<img src=' . $item['thumb_src'] .'> <a href=./photos.php?album=' . $item['aid'] . '>' . $item['title'] . '</a><br>';
 }
 ?>
